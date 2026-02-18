@@ -1,0 +1,7 @@
+{
+  "name": "StyleLens - Visual Fashion Search",
+  "description": "Snap a photo of any outfit and instantly find where to buy it or similar styles using advanced AI visual recognition and search grounding.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
