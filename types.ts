@@ -14,6 +14,7 @@ export interface WardrobeItem {
 }
 
 export type AppTab = 'search' | 'feed' | 'wardrobe';
+export type AppTheme = 'light' | 'dark';
 
 export interface AppState {
   image: string | null;
@@ -22,5 +23,6 @@ export interface AppState {
   error: string | null;
   activeTab: AppTab;
   wardrobe: WardrobeItem[];
-  history: string[]; // Base64 strings of last few searches
+  history: string[]; 
+  theme: AppTheme;
 }

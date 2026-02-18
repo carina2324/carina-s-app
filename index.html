@@ -3,41 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StyleLens | The Visual Stylist</title>
+    <title>StyleLens | Visual Fashion Discovery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg-color: #F9F9F7;
-        --brand-black: #121212;
-        --brand-blue: #1A47B8;
-        --border-color: rgba(0,0,0,0.06);
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+          }
+        }
       }
+    </script>
+    <style>
       body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--brand-black);
-        -webkit-font-smoothing: antialiased;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
       .gallery-card {
-        background: white;
-        border: 1px solid var(--border-color);
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .gallery-card:hover {
-        border-color: var(--brand-black);
-        transform: translateY(-2px);
-      }
-      .active-pill {
-        background-color: var(--brand-black);
-        color: white;
-      }
-      @keyframes float {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0px); }
-      }
-      .floating { animation: float 6s ease-in-out infinite; }
     </style>
     <script type="importmap">
     {
@@ -50,7 +44,9 @@
     }
     </script>
   </head>
-  <body>
+  <body class="bg-[#F9F9F7] text-[#121212] dark:bg-[#0A0A0A] dark:text-[#F9F9F7]">
     <div id="root"></div>
+    <!-- Entry point for the application -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>

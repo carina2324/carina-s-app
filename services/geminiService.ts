@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { AnalysisResult } from "../types";
 
@@ -10,7 +9,7 @@ export const analyzeFashionImage = async (base64Image: string): Promise<Analysis
 
   try {
     const response: GenerateContentResponse = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
+      model: 'gemini-3-flash-preview',
       contents: {
         parts: [
           {
